@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
         body,
@@ -40,6 +41,7 @@
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            color: #a83030;
         }
 
         p {
@@ -48,12 +50,59 @@
             margin-bottom: 40px;
         }
 
+        p.outline {
+            color: white;
+            text-shadow:
+                1px 0 1px black,
+                -1px 0 1px black,
+                0 1px 1px black,
+                0 -1px 1px black;
+        }
+
+        .toc {
+            position: relative;
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding-bottom: 10px;
+            margin-bottom: 0 !important;
+            padding: 20px 30px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 10px;
+        }
+
+        .toc a {
+            color: #a83030;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 54.25%;
             height: 0;
             overflow: hidden;
-            margin-top: 20px;
+            margin-top: 25px !important;
+            margin-bottom: 5px !important;
             border-radius: 12px;
         }
 
@@ -65,32 +114,171 @@
             height: 100%;
             border: none;
         }
+
+        .extra-link-block {
+            max-width: 900px;
+            margin: 10px auto 40px;
+            text-align: center;
+            margin-top: 5px !important;
+        }
+
+        .extra-link-block a,
+        .extra-link-block a:hover {
+            color: #bb0f0f;
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 28px;
+        }
+
+        #undesirable-me p:last-child {
+            margin-bottom: 10px !important;
+        }
+
+        #undesirable-me {
+            padding-bottom: 5px;
+        }
+
+        #undesirable-me p {
+            margin-bottom: 10px !important;
+        }
+
+        #fire-saver {
+            margin-top: 10px !important;
+            padding-top: 5px;
+        }
     </style>
+
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%;
+            animation: slide 12s infinite;
+        }
+
+        .carousel-track img {
+            width: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            45% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            70% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            95% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-
     <!-- Background video -->
     <video id="bg-video" autoplay muted loop playsinline>
         <source src="background.mp4" type="video/mp4" />
     </video>
 
-    <!-- Content -->
-    <div class="content">
-        <h1>Your Project Name</h1>
+    <nav class="toc">
+        <h2>Проекты</h2>
+        <ul>
+            <li><a href="#undesirable-me">Undesirable Me</a></li>
+            <li><a href="#fire-saver">Fire Saver</a></li>
+        </ul>
+    </nav>
 
-        <p>
-            This is a description of your project.
-            It appears over a looping background video.
+    <div id="undesirable-me" class="Undesirable Me content">
+        <h1>Undesirable Me</h1>
+
+        <p class="outline">
+            Undesirable Me – психологический хоррор в жанре визуальной новеллы и адвенчуры. Победи своего внутреннего
+            демона: решай сложные задачи, принимай трудные решения и столкнись с последствиями своих выборов. Кто
+            победит в этом внутреннем противостоянии и овладеет телом?
         </p>
 
         <!-- Embedded YouTube video -->
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen>
-            </iframe>
+            <video controls width="100%" poster="Undesirable Me Poster.png">
+                <source src="Undesirable Me Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- <div class="steam-link">
+            <iframe src="https://store.steampowered.com/widget/3010180/" frameborder="0" width="646"
+                height="190"></iframe>
+        </div> -->
+        <div class="extra-link-block">
+            <a href="https://store.steampowered.com/app/3010180/Undesirable_Me/?l=russian" target="_blank">Steam
+                link</a>
         </div>
     </div>
 
+    <div id="fire-saver" class="Fire Saver content">
+        <h1>Fire Saver</h1>
+
+        <p class="outline">
+            2D платформер с динамичными способностями, системой торговли, напряжёнными сражениями и эпичными битвами с
+            боссом. Игру дополняет большое количество скрытых зон, секретов и редкого контента, награждающего
+            любознательных.
+        </p>
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="FireSaver_image1.jpg" alt="">
+                <img src="FireSaver_image2.jpg" alt="">
+                <img src="FireSaver_image3.jpg" alt="">
+                <img src="FireSaver_image4.jpg" alt="">
+                <img src="FireSaver_image5.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- <div class="itchio-link">
+            <iframe frameborder="0" src="https://itch.io/embed/2336325" width="552" height="167"><a
+                    href="https://kayadesuga.itch.io/fire-saver">Fire Saver by Kayadesuga</a></iframe>
+        </div> -->
+        <div class="extra-link-block">
+            <a href="https://kayadesuga.itch.io/fire-saver" target="_blank">Itch.io link</a>
+        </div>
+    </div>
 </body>
 
 </html>
